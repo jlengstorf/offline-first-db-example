@@ -1,0 +1,19 @@
+{
+  "name": "offline-first-db-example",
+  "version": "0.0.1",
+  "description": "An offline-first progressive web app using PouchDB.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/jlengstorf/offline-first-db-example.git"
+  },
+  "author": "Jason Lengstorf <jason@lengstorf.com> (@jlengstorf)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jlengstorf/offline-first-db-example/issues"
+  },
+  "homepage": "https://github.com/jlengstorf/offline-first-db-example#readme"
+}
