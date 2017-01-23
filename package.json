@@ -4,6 +4,9 @@
   "description": "An offline-first progressive web app using PouchDB.",
   "main": "index.js",
   "scripts": {
+    "serve": "http-server",
+    "build": "gulp build",
+    "gh-pages": "gulp gh-pages",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +18,12 @@
   "bugs": {
     "url": "https://github.com/jlengstorf/offline-first-db-example/issues"
   },
-  "homepage": "https://github.com/jlengstorf/offline-first-db-example#readme"
+  "homepage": "https://github.com/jlengstorf/offline-first-db-example#readme",
+  "devDependencies": {
+    "gh-pages": "^0.12.0",
+    "gulp": "^3.9.1",
+    "http-server": "^0.9.0",
+    "run-sequence": "^1.2.2",
+    "sw-precache": "^4.3.0"
+  }
 }
