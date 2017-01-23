@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Thought Collector — An Offline-First Web App w/PouchDB</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+  </head>
+  <body>
+    <header class="app-header">
+      <h1 class="app-header__heading">Thought Collector</h1>
+      <p class="app-header__lede">
+        Never lose a great idea again.
+      </p>
+    </header>
+
+    <main class="app-content">
+      <div class="app-content__form">
+        <form class="thought-form">
+          <div class="thought-form__input-group">
+            <label for="thought" class="thought-form__label">
+              Whatcha Thinkin’ About?
+            </label>
+            <input class="thought-form__input" type="text" id="thought" autocomplete="off">
+          </div>
+          <div class="thought-form__input-group">
+            <label for="notes" class="thought-form__label">
+              Notes (optional)
+            </label>
+            <textarea class="thought-form__textarea" id="notes" rows="5" cols="45"></textarea>
+          </div>
+          <button class="thought-form__button" type="submit">Save Thought</button>
+          <input id="_id" type="hidden" value="">
+          <input id="_rev" type="hidden" value="">
+        </form>
+      </div>
+      <div class="app-content__thoughts"></div>
+    </main>
+
+    <footer class="app-footer">
+      <p class="app-footer__credits">
+        Built by
+        <a class="app-footer__credit-link" href="https://github.com/jlengstorf">
+          Jason Lengstorf
+        </a> under the ISC License.
+        <a class="app-footer__credit-link"
+           href="https://github.com/jlengstorf/offline-first-db-example/">
+          View the source code.
+        </a>
+      </p>
+    </footer>
+
+    <script src="assets/js/service-worker-registration.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
+    <script src="https://cdn.jsdelivr.net/pouchdb/6.1.1/pouchdb.min.js"></script>
+    <script src="assets/js/scripts.js"></script>
+
+    <script id="thought-template" type="text/x-handlebars-template">
+      {{#each thoughts}}
+        <div class="thoughts__item thought" data-id="{{ _id }}">
+          <h2 class="thought__heading">
+            {{thought}}
+          </h2>
+          {{#if image}}
+          <img class="thought__description"
+               src="{{ image }}"
+               alt="{{ thought }}">
+          {{/if}}
+          {{#if notes}}
+          <div class="thought__notes">
+            {{notes}}
+          </div>
+          {{/if}}
+          <a class="thought__action thought__action--edit"
+             href="#delete">
+            edit
+          </a>
+          <a class="thought__action thought__action--delete"
+             href="#delete">
+            delete
+          </a>
+        </div>
+      {{/each}}
+    </script>
+  </body>
+</html>
