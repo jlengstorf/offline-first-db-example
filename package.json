@@ -4,7 +4,7 @@
   "description": "An offline-first progressive web app using PouchDB.",
   "main": "index.js",
   "scripts": {
-    "serve": "http-server",
+    "serve": "http-server dist/",
     "build": "gulp build",
     "gh-pages": "gulp gh-pages",
     "test": "echo \"Error: no test specified\" && exit 1"
