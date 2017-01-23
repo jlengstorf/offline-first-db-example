@@ -1,0 +1,111 @@
+html,
+body {
+  background: #fdfdfd;
+  box-sizing: border-box;
+  color: #99a;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: lighter;
+  line-height: 1.5;
+  margin: 0;
+}
+
+* {
+  margin: 0;
+}
+
+* + * {
+  margin-top: 1rem;
+}
+
+.app-header,
+.app-content,
+.app-footer {
+  max-width: 30em;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+}
+
+.app-header {
+  border-bottom: 1px solid #dde;
+  margin-top: 5vw;
+  padding-bottom: 2rem;
+}
+
+.app-header__heading {
+  color: #556;
+  font-weight: lighter;
+  line-height: 1.1;
+}
+
+.app-header__lede {
+  margin-top: 0;
+}
+
+.app-content {
+  border-bottom: 1px solid #dde;
+  padding-bottom: 2rem;
+}
+
+.thought-form {
+  padding-bottom: 2rem;
+}
+
+.thought-form__label {
+  display: block;
+  font-size: 62.5%;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.thought-form__input,
+.thought-form__textarea {
+  border: 1px solid #aab;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-top: 0;
+  width: 100%;
+}
+
+.thought-form__input--file {
+  border: 0;
+  line-height: normal;
+}
+
+.thought {
+  background: #f7f7ff;
+  border-top: 1px solid #dde;
+  padding: 1rem 1rem 0.5rem;
+}
+
+.thought__heading {
+  color: #556;
+  font-size: 125%;
+  font-weight: lighter;
+  line-height: 1.1;
+}
+
+.thought__notes {
+  margin-top: 0;
+}
+
+.thought__action {
+  display: inline-block;
+  color: #aab;
+  font-size: 87.5%;
+}
+
+.app-footer {
+  margin-bottom: 5vw;
+}
+
+.app-footer__credits {
+  color: #aab;
+  font-size: 87.5%;
+  text-align: center;
+}
+
+.app-footer__credit-link {
+  color: inherit;
+}
